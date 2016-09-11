@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Spell Corrector.iml" filepath="$PROJECT_DIR$/Spell Corrector.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpellCorrector.iml" filepath="$PROJECT_DIR$/SpellCorrector.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

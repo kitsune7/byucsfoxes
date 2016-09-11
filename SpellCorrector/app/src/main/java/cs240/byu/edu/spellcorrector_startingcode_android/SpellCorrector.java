@@ -18,6 +18,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 import cs240.byu.edu.spellcorrector_startingcode_android.StudentPackage.ISpellCorrector;
+import cs240.byu.edu.spellcorrector_startingcode_android.StudentPackage.MySpellCorrector;
 
 public class SpellCorrector extends AppCompatActivity
 {
@@ -42,10 +43,9 @@ public class SpellCorrector extends AppCompatActivity
         String file = getIntent().getExtras().getString(MainActivity.fileSelectedKey);
 
         /**
-         * TODO set studentController to a new instance of your class that implements ISpellCorrector
          * E.G.: studentController = new MySpellCorrector();
          */
-        studentController = null;
+        studentController = new MySpellCorrector();
 
         mainSearchScreen = (RelativeLayout)findViewById(R.id.mainSearchPage);
 
