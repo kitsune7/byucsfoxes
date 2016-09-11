@@ -12,8 +12,7 @@ import java.util.Set;
 public interface IEvilHangmanGame {
 
     @SuppressWarnings("serial")
-    public static class GuessAlreadyMadeException extends Exception {
-    }
+    class GuessAlreadyMadeException extends Exception {}
 
     /**
      * Starts a new game of evil hangman using words from <code>dictionary</code>
@@ -26,7 +25,7 @@ public interface IEvilHangmanGame {
      * @param dictionary Dictionary of words to use for the game
      * @param wordLength Number of characters in the word to guess
      */
-    public void startGame(InputStreamReader dictionary, int wordLength);
+    void startGame(InputStreamReader dictionary, int wordLength);
 
 
     /**
@@ -41,6 +40,6 @@ public interface IEvilHangmanGame {
      * @throws GuessAlreadyMadeException If the character <code>guess</code>
      * has already been guessed in this game.
      */
-    public Set<String> makeGuess(char guess) throws GuessAlreadyMadeException;
+    Set<String> makeGuess(char guess) throws GuessAlreadyMadeException;
 
 }
