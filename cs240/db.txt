@@ -1,0 +1,97 @@
+drop table if exists Objects;
+drop table if exists AsteroidTypes;
+drop table if exists Levels;
+drop table if exists LevelObjects;
+drop table if exists LevelAsteroids;
+drop table if exists MainBodies;
+drop table if exists Cannons;
+drop table if exists ExtraParts;
+drop table if exists Engines;
+drop table if exists PowerCores;
+
+create table Objects (
+	id integer primary key autoincrement not null unique,
+	path varchar not null
+);
+
+create table AsteroidTypes (
+	id integer primary key autoincrement not null unique,
+	type varchar not null,
+	image varchar not null,
+	image_width integer not null,
+	image_height integer not null
+);
+
+create table Levels (
+	id integer primary key autoincrement not null unique,
+	number integer not null,
+	title varchar not null,
+	hint varchar not null,
+	width integer not null,
+	height integer not null,
+	music varchar not null
+);
+
+create table LevelObjects (
+	id integer primary key autoincrement not null unique,
+	level_id integer not null,
+	position varchar not null,
+	object_id integer not null,
+	scale real not null
+);
+
+create table LevelAsteroids (
+	id integer primary key autoincrement not null unique,
+	level_id integer not null,
+	number integer not null,
+	asteroid_type_id integer not null
+);
+
+create table MainBodies (
+	id integer primary key autoincrement not null unique,
+	cannon_attach varchar not null,
+	engine_attach varchar not null,
+	extra_attach varchar not null,
+	image varchar not null,
+	image_width integer not null,
+	image_height integer not null
+);
+
+create table Cannons (
+	id integer primary key autoincrement not null unique,
+	attach_point varchar not null,
+	emit_point varchar not null,
+	image varchar not null,
+	image_width integer not null,
+	image_height integer not null,
+	attack_image varchar not null,
+	attack_image_width integer not null,
+	attack_image_height integer not null,
+	attack_sound varchar not null,
+	damage integer not null
+);
+
+create table ExtraParts (
+	id integer primary key autoincrement not null unique,
+	attach_point varchar not null,
+	image varchar not null,
+	image_width integer not null,
+	image_height integer not null
+);
+
+create table Engines (
+	id integer primary key autoincrement not null unique,
+	base_speed integer not null,
+	base_turn_rate integer not null,
+	attach_point varchar not null,
+	image varchar not null,
+	image_width integer not null,
+	image_height integer not null
+);
+
+create table PowerCores (
+	id integer primary key autoincrement not null unique,
+	cannon_boost integer not null,
+	engine_boost integer not null,
+	image varchar not null
+);
