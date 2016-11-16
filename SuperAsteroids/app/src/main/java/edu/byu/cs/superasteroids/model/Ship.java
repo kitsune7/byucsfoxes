@@ -193,6 +193,10 @@ public class Ship extends MovingObject {
             angle,
             cannon.getAttackImage()
         ));
+        System.out.printf("CannonAttachX: %d\n", getBody().getCannonAttach().getX());
+        System.out.printf("CannonAttachY: %d\n", getBody().getCannonAttach().getY());
+        System.out.printf("ShipX: %d ShipY: %d\n\n", getX(), getY());
+
         ContentManager.getInstance().playSound(laserSoundId, 1, 1);
     }
 
