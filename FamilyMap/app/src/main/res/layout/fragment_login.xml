@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- User Name -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/username_prompt"
+                android:paddingRight="10dp"
+                android:textSize="20dp"
+                android:textColor="@color/black" />
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <!-- Password -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/password_prompt"
+                android:paddingRight="10dp"
+                android:textSize="20dp"
+                android:textColor="@color/black" />
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </TableRow>
+
+        <!-- Server Host -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hostname_prompt"
+                android:paddingRight="10dp"
+                android:textSize="20dp"
+                android:textColor="@color/black" />
+            <EditText
+                android:id="@+id/hostname"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <!-- Server Port -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/port_prompt"
+                android:paddingRight="10dp"
+                android:textSize="20dp"
+                android:textColor="@color/black" />
+            <EditText
+                android:id="@+id/port"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+        </TableRow>
+
+        <!-- Sign in -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            android:gravity="center">
+            <Button
+                android:id="@+id/signin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="@string/sign_in" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

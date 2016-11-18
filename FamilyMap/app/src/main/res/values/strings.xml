@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FamilyMap</string>
+    <string name="username_prompt">User Name: </string>
+    <string name="password_prompt">Password: </string>
+    <string name="hostname_prompt">Server Host: </string>
+    <string name="port_prompt">Server Port: </string>
+    <string name="sign_in">Sign in</string>
+</resources>
